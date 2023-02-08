@@ -1,17 +1,14 @@
 const mongoose = require('mongoose');
 
 const ReservationSchema = new mongoose.Schema({
-    LocationId: {
-        type: String, 
-        required: true
+    Location:{
+        type: Schema.Types.ObjectId, ref: 'Location'
     },
-    BikeId: {
-        type: String,
-        required: true
+    Bike:{
+        type: Schema.Types.ObjectId, ref: 'Bike'
     },
-    UserId: {
-        type: String,
-        required: true
+    User:{
+        type: Schema.Types.ObjectId, ref: 'User'
     },
     FromDate: {
         type: Date,

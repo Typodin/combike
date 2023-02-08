@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const BikeSchema = new mongoose.Schema({
-    Id: {
-        type: String, 
-        required: true
+    Location: {
+        type: Schema.Types.ObjectId, 
+        ref: 'Location'
     },
     Available: {
         type: bool,

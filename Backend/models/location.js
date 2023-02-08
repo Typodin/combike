@@ -5,10 +5,9 @@ const LocationSchema = new mongoose.Schema({
         type: String, 
         required: true
     },
-    Bikes: {
-        type: Array,
-        required: true
-    },
+    Bikes:[
+        {type: Schema.Types.ObjectId, ref: 'Bike'}
+    ]
 
 });
 export default mongoose.model('Location', LocationSchema);

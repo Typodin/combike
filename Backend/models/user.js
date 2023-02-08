@@ -5,8 +5,9 @@ const UserSchema = new mongoose.Schema({
         type: String, 
         required: true
     },
-    RentedBikeId: {
-        type: String
+    RentedBike:
+    {
+        type: Schema.Types.ObjectId, ref: 'Bike'
     }
 });
 export default mongoose.model('User', UserSchema);
