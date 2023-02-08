@@ -6,7 +6,7 @@ const LocationSchema = new mongoose.Schema({
         required: true
     },
     Bikes:[
-        {type: Schema.Types.ObjectId, ref: 'Bike'}
+        {type: Schema.Types.ObjectId, ref: 'Bike'},
     ]
 
 });

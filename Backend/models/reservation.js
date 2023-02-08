@@ -2,20 +2,19 @@ const mongoose = require('mongoose');
 
 const ReservationSchema = new mongoose.Schema({
     Location:{
-        type: Schema.Types.ObjectId, ref: 'Location'
+        type: Schema.Types.ObjectId, ref: 'Location',
+        required: true
     },
     Bike:{
-        type: Schema.Types.ObjectId, ref: 'Bike'
+        type: Schema.Types.ObjectId, ref: 'Bike',
+        required: true
     },
     User:{
-        type: Schema.Types.ObjectId, ref: 'User'
+        type: Schema.Types.ObjectId, ref: 'User',
+        required: true
     },
     FromDate: {
         type: Date,
-        required: true
-    },
-    ToDate: {
-        type: Date, 
         required: true
     }
 });
