@@ -1,17 +1,17 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const BikeSchema = new mongoose.Schema({
-    Location: {
-        type: Schema.Types.ObjectId, 
-        ref: 'Location'
-    },
-    Available: {
-        type: bool,
-        required: true
-    },
-    Functioning: {
-        type: bool,
-        required: true
-    }
+  Location: {
+    type: mongoose.Schema.Types.ObjectId, // changed "Schema" to "mongoose.Schema"
+    ref: "Location",
+  },
+  Available: {
+    type: Boolean, // FIX: Change bool to Boolean
+    required: true,
+  },
+  Functioning: {
+    type: Boolean, // FIX: Change bool to Boolean
+    required: true,
+  },
 });
-export default mongoose.model('Bike', BikeSchema);
+export default mongoose.model("Bike", BikeSchema);
