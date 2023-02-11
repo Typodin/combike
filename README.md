@@ -11,32 +11,32 @@ BCrypt - encrypting passwords
 ## File Structure<br/>
 
 #### combike
-|-- controllers
-| |-- bikesController.js
-| |-- locationsController.js
-| |-- reservationsController.js
-|-- middlewares
-| |-- authentication.js
-| |-- authorization.js
-| |-- validate.js
-|-- models
-| |-- bike.js
-| |-- location.js
-| |-- reservation.js
-| |-- user.js
-|-- routes
-| |-- bikes.js
-| |-- locations.js
-| |-- reservations.js
-| |-- users.js
-|-- utils
-| |-- errorHandler.js
-| |-- jwt.js
-|-- .env
-|-- .gitignore
-|-- package.json
-|-- package-lock.json
-|-- server.js
+|-- controllers<br/>
+| |-- bikesController.js<br/>
+| |-- locationsController.js<br/>
+| |-- reservationsController.js<br/>
+|-- middlewares<br/>
+| |-- authentication.js<br/>
+| |-- authorization.js<br/>
+| |-- validate.js<br/>
+|-- models<br/>
+| |-- bike.js<br/>
+| |-- location.js<br/>
+| |-- reservation.js<br/>
+| |-- user.js<br/>
+|-- routes<br/>
+| |-- bikes.js<br/>
+| |-- locations.js<br/>
+| |-- reservations.js<br/>
+| |-- users.js<br/>
+|-- utils<br/>
+| |-- errorHandler.js<br/>
+| |-- jwt.js<br/>
+|-- .env<br/>
+|-- .gitignore<br/>
+|-- package.json<br/>
+|-- package-lock.json<br/>
+|-- server.js<br/>
 <br/>
 * controllers folder contains the files that handle the requests and the response.
 * middlewares folder contains the files responsible for authentication, authorization, and request validation.
