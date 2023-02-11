@@ -2,11 +2,11 @@
 The Combike project is a bicycle loan system for the city of Montreal. The backend is responsible for handling all the data, processing requests from the frontend, and communicating with the database.<br/>
 
 ## Technologies Used<br/>
-NodeJS
-Express
-MongoDB - database
-JSON Web Token - secure admin and user authentication/authorization
-BCrypt - encrypting passwords
+NodeJS<br/>
+Express<br/>
+MongoDB - database<br/>
+JSON Web Token - secure admin and user authentication/authorization<br/>
+BCrypt - encrypting passwords<br/>
 
 ## File Structure<br/>
 
