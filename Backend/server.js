@@ -22,7 +22,6 @@ mongoose.connect(process.env.MONGODB_URI, {
 });
 
 app.use(express.json());
-app.use(cors());
 
 // Use routes
 app.use("/api/bikes", bikesRoutes);
