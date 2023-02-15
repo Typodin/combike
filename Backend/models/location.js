@@ -1,10 +1,36 @@
 const mongoose = require("mongoose");
 
-const LocationSchema = new mongoose.Schema({
-  Address: {
+const locationSchema = new mongoose.Schema({
+  id: {
     type: String,
     required: true,
   },
-  Bikes: [{ type: Schema.Types.ObjectId, ref: "Bike" }],
+  status: {
+    type: String,
+    required: true,
+  },
+  address: {
+    type: String,
+    required: true,
+  },
+  slots: {
+    type: Number,
+    required: true,
+  },
+  latitude: {
+    type: Number,
+    required: true,
+  },
+  longitude: {
+    type: Number,
+    required: true,
+  },
+  bikes: {
+    type: Number,
+    required: true,
+  },
 });
-export default mongoose.model("Location", LocationSchema);
+
+const Location = mongoose.model("Location", locationSchema);
+
+module.exports = Location;
