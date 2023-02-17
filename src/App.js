@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import {render} from 'react-dom';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import MapComponent from "./components/Maps/MapComponent";
+import AdminPanel from "./components/Admins/AdminPanel";
+
+const tokenKey = 'pk.eyJ1IjoidHlwb2RpbiIsImEiOiJjbGU0ZDFxMHAwMXVwM3NtcGdkbXpnMmN2In0.wIc1bwbiPT7eQEf6y4TgEA';
+
+export default function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<MapComponent token={tokenKey} />} />
+                <Route path="/admin" element={<AdminPanel />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-export default App;
+export function renderToDom(container) {
+    render(<App />, container);
+}
