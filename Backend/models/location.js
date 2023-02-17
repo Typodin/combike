@@ -13,6 +13,10 @@ const locationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  bikes: {
+    type: Number,
+    required: true,
+  },
   slots: {
     type: Number,
     required: true,
@@ -25,10 +29,7 @@ const locationSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  bikes: {
-    type: Number,
-    required: true,
-  },
+  
 });
 
 const Location = mongoose.model("Location", locationSchema);

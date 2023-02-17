@@ -14,4 +14,4 @@ const BikeSchema = new mongoose.Schema({
     required: true,
   },
 });
-export default mongoose.model("Bike", BikeSchema);
+module.exports = mongoose.model('Bike', BikeSchema);

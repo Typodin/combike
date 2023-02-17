@@ -9,6 +9,16 @@ dotenv.config();
 
 const app = express();
 
+// Routes
+const locationsRouter = require("./routes/locations");
+app.use("/locations", locationsRouter);
+const bikesRouter = require("./routes/bikes");
+// app.use('/bikes', bikesRouter);
+const usersRouter = require("./routes/users");
+// app.use('/users', usersRouter);
+const reservationsRouter = require("./routes/reservations");
+// app.use('/reservations', reservationsRouter);
+
 // Connect to MongoDB
 mongoose.set("strictQuery", true);
 mongoose
@@ -16,8 +26,12 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("MongoDB connected..."))
-  .catch((err) => console.log("DB err", err));
+  .then(() => {
+    console.log("MongoDB connected...");
+  })
+  .catch((error) => {
+    console.log("MongoDB connection error:", error);
+  });
 
 app.use(express.json());
 
