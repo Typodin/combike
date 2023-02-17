@@ -33,4 +33,4 @@ function Login({openLogin, setOpenLogin}) {
   )
 }
 
-export default Login;
+export default Login

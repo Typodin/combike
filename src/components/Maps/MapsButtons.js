@@ -1,4 +1,4 @@
-
+import * as React from 'react';
 function MapsButtons({setOpenSearch, setOpenLogin}) {
     return (
         <div className="main-buttons">
