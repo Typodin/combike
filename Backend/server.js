@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
 
 const errorHandler = require("./utils/errorHandler");
 
@@ -9,6 +10,7 @@ dotenv.config();
 
 const app = express();
 
+app.use(cors());
 // Routes
 const locationsRouter = require("./routes/locations");
 app.use("/locations", locationsRouter);
