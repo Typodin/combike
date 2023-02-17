@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useState, useEffect, useMemo} from "react";
+import {useState} from "react";
 import SearchPanelItem from "./SearchPanelItem";
 
 function SearchPanel({placesObject, openSearch, setOpenSearch}) {

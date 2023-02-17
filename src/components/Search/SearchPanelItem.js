@@ -1,3 +1,4 @@
+import * as React from 'react';
 function SearchPanelItem(props) {
     const {address, bikes, slots, distance} = props;
     return (
